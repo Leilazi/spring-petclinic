@@ -31,7 +31,7 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-    update-gitops:
+  update-gitops:
     needs: build # Mettre ici le nom de votre job précédent (celui qui push sur GHCR)
     runs-on: ubuntu-latest
     steps:
